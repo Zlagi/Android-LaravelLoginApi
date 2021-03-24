@@ -31,4 +31,4 @@ Route::namespace('Api')->group(function(){
 
     });
 
-});
+}); 
