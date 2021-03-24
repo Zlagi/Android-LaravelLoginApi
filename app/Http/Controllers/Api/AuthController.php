@@ -51,6 +51,13 @@ class AuthController extends Controller
         ], 201);
     }
 
+    public function logout(Request $request){
+        $request->user()->token()->revoke();
+        return response()->json([
+            "message"=>"User logged out successfully"
+        ], 200);
+    }
+
     public function index() {
         echo "Hello world";
     }
